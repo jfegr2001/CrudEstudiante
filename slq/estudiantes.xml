@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Servidor: 127.0.0.1
+- Tiempo de generación: 22-08-2023 a las 18:34:43
+- Versión del servidor: 10.4.28-MariaDB
+- Versión de PHP: 8.2.4
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="eam" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="estudiantes">
+                CREATE TABLE `estudiantes` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `codigo` varchar(250) NOT NULL,
+                  `cedula` varchar(250) NOT NULL,
+                  `edad` int(11) NOT NULL,
+                  `nombre` varchar(250) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `codigo` (`codigo`),
+                  UNIQUE KEY `cedula` (`cedula`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'eam'
+    -->
+    <database name="eam">
+        <!-- Tabla estudiantes -->
+        <table name="estudiantes">
+            <column name="id">1</column>
+            <column name="codigo">100012</column>
+            <column name="cedula">1005079540</column>
+            <column name="edad">23</column>
+            <column name="nombre">juan felipe giraldo </column>
+        </table>
+        <table name="estudiantes">
+            <column name="id">2</column>
+            <column name="codigo">100234</column>
+            <column name="cedula">1005079541</column>
+            <column name="edad">34</column>
+            <column name="nombre">sebastian arce</column>
+        </table>
+        <table name="estudiantes">
+            <column name="id">3</column>
+            <column name="codigo">100455</column>
+            <column name="cedula">1005079542</column>
+            <column name="edad">24</column>
+            <column name="nombre">juan pablo acosta</column>
+        </table>
+    </database>
+</pma_xml_export>
